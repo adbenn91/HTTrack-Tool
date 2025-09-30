@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "httrack-to-template"
+dependencies = [
+    "beautifulsoup4>=4.9.3",
+    "Pillow>=8.0.0",
+    "Jinja2>=3.0.0",
+    "click>=8.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=6.0", "black", "flake8"]
+web = ["flask>=2.0.0"]
+
+[project.scripts]
+httrack2template = "httrack_to_template.cli:main"
